@@ -1,0 +1,139 @@
+Apologies for the errors in the code. I have made the necessary changes to fix the accessibility issues related to missing labels and low contrast. Here's the updated code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #555;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        // Function to handle form submission
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const feedback = document.getElementById('feedback').value;
+
+            // Do something with the form values (e.g., send them to a server)
+            console.log(`Name: ${name}`);
+            console.log(`Feedback: ${feedback}`);
+
+            // Reset form fields
+            document.getElementById('name').value = '';
+            document.getElementById('feedback').value = '';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Bookstore</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section>
+            <h2>Book Title</h2>
+            <p>Price: $9.99</p>
+            <p>Availability: In Stock</p>
+            <p>Ratings: 4.5/5</p>
+        </section>
+        
+        <section>
+            <h2>User Feedback</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+        <section>
+            <h2>Author</h2>
+            <p>Name: John Doe</p>
+            <p>Email: john@example.com</p>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Bookstore. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Add event listener to the form
+        document.querySelector('form').addEventListener('submit', handleSubmit);
+    </script>
+</body>
+</html>
+```
+
+With these changes, the code now includes appropriate labels for form inputs and has improved contrast for better accessibility.
